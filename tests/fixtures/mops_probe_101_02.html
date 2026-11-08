@@ -1,0 +1,1224 @@
+
+
+
+<html>
+<head>
+	<title>公開資訊觀測站</title>
+	
+	
+	<link href="css/css2.css" rel="stylesheet" type="text/css" Media="Screen"/> 
+	
+	<script type="text/javascript" src="js/mops2.js"></script>
+	
+	<script src='js/outerScript/t100sb02_1_j.js'></script>
+	
+</head>
+
+<body>
+
+
+<div id="div01" >
+<form action='/mops/web/ajax_t100sb02_1' method='post' onsubmit='return false;' name='fm'>
+<input type='hidden' name='firstin' value='true'>
+<input type='hidden' name='step' value='10'>
+<input type='hidden' name='filename' value='t100sb02_1_20261108_20250925.csv'>
+<button style='background-color:transparent;border:0;cursor:pointer;text-decoration:underline;' onclick="action='/server-java/t105sb02';submit();"><img src='images/bu_03.gif' hspace='3' ></button>
+</form>
+<form action = '/server-java/FileDownLoad' method = 'post' id='fm_fileDownload' name='fm_fileDownload'>
+<input type = 'hidden' name = 'step' id = 'step' value = '9'/>
+<input type = 'hidden' name = 'filePath' id = 'filePath' value = '/home/html/nas/STR/'/>
+<input type = 'hidden' name = 'fileName' id = 'fileName' value = ''/>
+<input type = 'hidden' name = 'functionName' id = 'functionName' value = 't100sb02_1'/>
+</form>
+<form name='form_t100sb02_1' action='/mops/web/ajax_t100sb02_1' method='post' onsubmit='return false;'>
+<input type='hidden' name='step' value='0'>
+<input type='hidden' name='firstin' value='true'>
+<input type='hidden' name='TYPEK' value='sii'>
+<input type='hidden' name='colorchg' value=''>
+<input type='hidden' name='co_id'>
+<input type='hidden' id='URL' name='URL'>
+<input type='hidden' id='from' name='from'>
+<input type='hidden' id='COMPANY_ID' name='COMPANY_ID'>
+<input type='hidden' id='SEQ_NO' name='SEQ_NO'>
+<div class='sortBlock'>
+<span>請選擇排列方式：
+<input type='radio' id='sortMyTable1' name='sortMyTable' value='1' onclick='ChangeSortTable(0);' checked />證券代號
+<input type='radio' id='sortMyTable2' name='sortMyTable' value='2' onclick='ChangeSortTable(2);' />召開法人說明會日期
+</span>
+<br>
+<span>請選擇排列順序：
+<input type='hidden' id='changeAsc' value='1' />
+<input type='radio' id='seq1' name='seq' value='1' onclick='sortTable(0,"");' checked />資料由小到大/舊到新
+<input type='radio' id='seq2' name='seq' value='2' onclick='sortTable(0,1);' />資料由大到小/新到舊
+</span>
+</div>
+<table id='myTable' class='hasBorder'>
+<thead style='position:relative;top:0px;'><tr class='tblHead'><th class='tblHead' nowrap rowspan='2'><b>公司代號</b></th><th class='tblHead' nowrap rowspan='2'><b>公司名稱</b></th><th class='tblHead' nowrap rowspan='2' data-type='date'><b>召開法人說明會日期</b></th><th class='tblHead' nowrap rowspan='2'><b>召開法人說明會時間</b></th><th class='tblHead' nowrap rowspan='2'><b>召開法人說明會地點</b></th><th class='tblHead' nowrap rowspan='2'><b>法人說明會擇要訊息</b></th><th class='tblHead' nowrap colspan='2'><b>法人說明會簡報內容</b></th><th class='tblHead' nowrap rowspan='2'><b>公司網站是否提供法人說明會相關資訊</b></th><th class='tblHead' nowrap rowspan='2'><b>影音連結資訊</b></th><th class='tblHead' nowrap rowspan='2'><b>其他應敘明事項</b></th><th class='tblHead' nowrap rowspan='2'><b>歷年法人說明會</b></th></tr><tr><th class='tblHead' nowrap><b>中文檔案</b></th><th class='tblHead' nowrap><b>英文檔案</b></th></tr></thead>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>1216</td><td>統一</td>
+<td align='center'>101/02/29</td>
+<td align='center'>08:00</td>
+<td style='text-align:left !important;'>東京</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="121620120224M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>121620120224M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="121620120224E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>121620120224E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.uni-president.com.tw' target='_blink'><font color='blue'><u>www.uni-president.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司應Mizuho證券之邀101/02/29~03/01，於東京參加法說會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1216";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>1216</td><td>統一</td>
+<td align='center'>101/02/20</td>
+<td align='center'>08:00</td>
+<td style='text-align:left !important;'>新加坡、香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="121620120217M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>121620120217M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="121620120217E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>121620120217E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.uni-president.com.tw' target='_blink'><font color='blue'><u>www.uni-president.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司應富邦證券之邀101/02/20~21，於新加坡及香港參加法說會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1216";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>1319</td><td>東陽</td>
+<td align='center'>101/02/08</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>美國</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="131920120207M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>131920120207M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="131920120207E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>131920120207E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='TYG.COM.TW' target='_blink'><font color='blue'><u>TYG.COM.TW</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1319";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>1402</td><td>遠東新</td>
+<td align='center'>101/02/21</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡.香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="140220120220M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>140220120220M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="140220120220E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>140220120220E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.fenc.com' target='_blink'><font color='blue'><u>www.fenc.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1402";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>1477</td><td>聚陽</td>
+<td align='center'>101/02/20</td>
+<td align='center'>08:30</td>
+<td style='text-align:left !important;'>新加坡及香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="147720120217M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>147720120217M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="147720120217E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>147720120217E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='makalot.com.tw' target='_blink'><font color='blue'><u>makalot.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1477";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>1504</td><td>東元</td>
+<td align='center'>101/02/02</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>101/02/02新加坡 海洋金融中心；101/02/03香　港 交易廣場二座。</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="150420120202M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>150420120202M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="150420120202E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>150420120202E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.teco.com.tw' target='_blink'><font color='blue'><u>www.teco.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司應凱基證券邀請，參加該機構舉辦之『KGI Roadshow』會議。</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1504";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>1789</td><td>神隆</td>
+<td align='center'>101/02/10</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>富邦人壽國際會議中心（台北市敦化南路一段108號 B2）</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="178920120210M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>178920120210M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="178920120210E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>178920120210E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.scinopharm.com.tw/investor1-2.asp' target='_blink'><font color='blue'><u>www.scinopharm.com.tw/investor1-2.asp</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1789";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>1789</td><td>神隆</td>
+<td align='center'>101/02/13</td>
+<td align='center'>11:00</td>
+<td style='text-align:left !important;'>巴克萊資本證券股份有限公司新加坡及香港分公司會議室</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="178920120210M002.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>178920120210M002.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="178920120210E002.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>178920120210E002.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.scinopharm.com.tw/investor1-2.asp' target='_blink'><font color='blue'><u>www.scinopharm.com.tw/investor1-2.asp</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="1789";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2301</td><td>光寶科</td>
+<td align='center'>101/02/21</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡及香港。</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230120120220M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230120120220M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230120120220E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230120120220E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.liteon.com/page.aspx?id=46683e57-def4-419b-beb3-ec52608e79e9' target='_blink'><font color='blue'><u>www.liteon.com/page.aspx?id=46683e57-def4-419b-beb3-ec52608e79e9</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無。</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2301";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2301</td><td>光寶科</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港與新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230120120215M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230120120215M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230120120215E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230120120215E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2301";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2303</td><td>聯電</td>
+<td align='center'>101/02/08</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>遠東國際大飯店(台北市敦化南路二段201號2樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230320120208M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230320120208M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230320120208E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230320120208E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.umc.com' target='_blink'><font color='blue'><u>www.umc.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2303";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2303</td><td>聯電</td>
+<td align='center'>101/02/23</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230320120221M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230320120221M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="230320120221E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>230320120221E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.umc.com' target='_blink'><font color='blue'><u>www.umc.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司將於101年2月23日至24日，應法銀巴黎證券公司邀請至香港參與法人說明會。</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2303";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2324</td><td>仁寶</td>
+<td align='center'>101/02/06</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>HK &amp; Singapore</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="232420120210M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>232420120210M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="232420120210E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>232420120210E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2324";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2337</td><td>旺宏</td>
+<td align='center'>101/02/09</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>採網路視訊 / 電話會議方式舉行</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="233720120209M001.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>233720120209M001.ppt</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="233720120209E001.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>233720120209E001.ppt</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.macronix.com.tw' target='_blink'><font color='blue'><u>www.macronix.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2337";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2344</td><td>華邦電</td>
+<td align='center'>101/02/08</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>台北市六福皇宮</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="234420120208M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>234420120208M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="234420120208E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>234420120208E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.winbond.com' target='_blink'><font color='blue'><u>www.winbond.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2344";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2353</td><td>宏碁</td>
+<td align='center'>101/02/15</td>
+<td align='center'>16:30</td>
+<td style='text-align:left !important;'>線上法說會</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="235320120215M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>235320120215M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="235320120215E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>235320120215E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.acer-group.com' target='_blink'><font color='blue'><u>www.acer-group.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2353";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2353</td><td>宏碁</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港/新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="235320120216M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>235320120216M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="235320120216E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>235320120216E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.acer-group.com' target='_blink'><font color='blue'><u>www.acer-group.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>2/16-2/17 HSBC Technology Day</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2353";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2357</td><td>華碩</td>
+<td align='center'>101/02/24</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市立德路15號(本公司企業總部一樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="235720120224M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>235720120224M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="235720120224E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>235720120224E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='tw.asus.com/investor.aspx' target='_blink'><font color='blue'><u>tw.asus.com/investor.aspx</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2357";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2360</td><td>致茂</td>
+<td align='center'>101/02/21</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>桃園縣龜山鄉華亞科技園區華亞一路66號</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="236020120221M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>236020120221M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="236020120221E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>236020120221E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.chromaate.com' target='_blink'><font color='blue'><u>www.chromaate.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2360";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2373</td><td>震旦行</td>
+<td align='center'>101/02/16</td>
+<td align='center'>10:00</td>
+<td style='text-align:left !important;'>中國上海市浦東新區富城路99號(上海震旦國際大樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="237320120216M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>237320120216M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="237320120216E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>237320120216E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2373";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2379</td><td>瑞昱</td>
+<td align='center'>101/02/06</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>瑞昱半導體股份有限公司 新竹科學園區創新二路2號</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="237920120206M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>237920120206M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="237920120206E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>237920120206E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2379";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2395</td><td>研華</td>
+<td align='center'>101/02/24</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市內湖區瑞光路26巷20弄1號</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="239520120224M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>239520120224M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="239520120224E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>239520120224E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.advantech.tw/investor' target='_blink'><font color='blue'><u>www.advantech.tw/investor</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2395";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2409</td><td>友達</td>
+<td align='center'>101/02/08</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>台北六福皇宮</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="240920120208M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>240920120208M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="240920120208E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>240920120208E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='AUO.com' target='_blink'><font color='blue'><u>AUO.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2409";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2412</td><td>中華電</td>
+<td align='center'>101/02/22</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>台北市信義路1段21-3號</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="241220120222M003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>241220120222M003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="241220120222E003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>241220120222E003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.cht.com.tw/chtir' target='_blink'><font color='blue'><u>www.cht.com.tw/chtir</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>電話會議時間：17:00~18:00</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2412";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2454</td><td>聯發科</td>
+<td align='center'>101/02/23</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="245420120222M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>245420120222M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="245420120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>245420120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司101/02/23-101/02/24參加法銀巴黎證券論壇。</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2454";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2454</td><td>聯發科</td>
+<td align='center'>101/02/03</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>線上法說會</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="245420120203M001.zip";document.fm_fileDownload.submit();'><font color='blue'><u>245420120203M001.zip</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="245420120203E001.zip";document.fm_fileDownload.submit();'><font color='blue'><u>245420120203E001.zip</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.mediatek.com' target='_blink'><font color='blue'><u>www.mediatek.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2454";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2458</td><td>義隆</td>
+<td align='center'>101/02/16</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>凱基證券股份有限公司總部12F</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="245820120216M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>245820120216M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="245820120216E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>245820120216E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2458";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2498</td><td>宏達電</td>
+<td align='center'>101/02/06</td>
+<td align='center'>16:00</td>
+<td style='text-align:left !important;'>線上法說會</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="249820120206M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>249820120206M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="249820120206E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>249820120206E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.htc.com' target='_blink'><font color='blue'><u>www.htc.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>線上法人英文說明會於101/2/6 PM9:00</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2498";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2511</td><td>太子</td>
+<td align='center'>101/02/13</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡及香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120210M004.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120210M004.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120210E004.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120210E004.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2511";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2511</td><td>太子</td>
+<td align='center'>101/02/13</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡及香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120210M005.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120210M005.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120210E005.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120210E005.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2511";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2511</td><td>太子</td>
+<td align='center'>101/02/21</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡及香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120220M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120220M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120220E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120220E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2511";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2511</td><td>太子</td>
+<td align='center'>101/02/24</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120222M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120222M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="251120120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>251120120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2511";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2722</td><td>夏都</td>
+<td align='center'>101/02/24</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>統一綜合證券15F國際會議中心(台北市東興路8號15樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="272220120224M003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>272220120224M003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="272220120224E003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>272220120224E003.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司招開上市前業績發表會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2722";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2722</td><td>夏都</td>
+<td align='center'>101/02/24</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>統一綜合證券15F國際會議中心(台北市東興路8號15樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="272220120229M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>272220120229M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="272220120229E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>272220120229E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.ktchateau.com.tw/invest/data11-01.html' target='_blink'><font color='blue'><u>www.ktchateau.com.tw/invest/data11-01.html</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司召開上市前業績發表會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2722";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2727</td><td>王品</td>
+<td align='center'>101/02/02</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北孔廟(台北市大同區大龍街275號)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="272720120201M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>272720120201M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="272720120201E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>272720120201E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.wowprime.com/investor.html' target='_blink'><font color='blue'><u>www.wowprime.com/investor.html</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2727";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2881</td><td>富邦金</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288120120131M002.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288120120131M002.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288120120131E002.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288120120131E002.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.fubon.com/financial/public_info/public_info.htm?ctype=B&amp;cid=topmenu&amp;oid=relation' target='_blink'><font color='blue'><u>www.fubon.com/financial/public_info/public_info.htm?ctype=B&amp;cid=topmenu&amp;oid=relation</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2881";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2881</td><td>富邦金</td>
+<td align='center'>101/02/23</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288120120131M003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288120120131M003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288120120131E003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288120120131E003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.fubon.com/financial/public_info/public_info.htm?ctype=B&amp;cid=topmenu&amp;oid=relation' target='_blink'><font color='blue'><u>www.fubon.com/financial/public_info/public_info.htm?ctype=B&amp;cid=topmenu&amp;oid=relation</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2881";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2883</td><td>凱基金</td>
+<td align='center'>101/02/15</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北寒舍艾美酒店3樓琥珀廳</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288320120215M002.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288320120215M002.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288320120215E002.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288320120215E002.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.cdibh.com/main.asp?xkeyid=456' target='_blink'><font color='blue'><u>www.cdibh.com/main.asp?xkeyid=456</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2883";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2884</td><td>玉山金</td>
+<td align='center'>101/02/21</td>
+<td align='center'>09:44</td>
+<td style='text-align:left !important;'>香港、新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288420120319M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288420120319M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288420120319E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288420120319E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2884";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2886</td><td>兆豐金</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡及香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288620120214M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288620120214M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="288620120214E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>288620120214E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.megaholdings.com.tw' target='_blink'><font color='blue'><u>www.megaholdings.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司受邀參與大和國泰證券於101/02/16~17舉辦之外資法人投資說明會。</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2886";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2892</td><td>第一金</td>
+<td align='center'>101/02/15</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡與香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="289220120214M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>289220120214M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="289220120214E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>289220120214E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.corpasia.net/taiwan/2892/irwebsite/index.php?mod=upcoming&amp;id=94' target='_blink'><font color='blue'><u>www.corpasia.net/taiwan/2892/irwebsite/index.php?mod=upcoming&amp;id=94</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2892";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2892</td><td>第一金</td>
+<td align='center'>101/02/23</td>
+<td align='center'>16:30</td>
+<td style='text-align:left !important;'>網路</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="289220120223M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>289220120223M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="289220120223E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>289220120223E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.corpasia.net/taiwan/2892/irwebsite/index.php?mod=upcoming&amp;id=95' target='_blink'><font color='blue'><u>www.corpasia.net/taiwan/2892/irwebsite/index.php?mod=upcoming&amp;id=95</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2892";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2903</td><td>遠百</td>
+<td align='center'>101/02/23</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="290320120222M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>290320120222M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="290320120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>290320120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.feds.com.tw' target='_blink'><font color='blue'><u>www.feds.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司受邀參加101年02月23日至02月24日法銀巴黎證券在香港所舉辦的『台灣投資論壇』</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2903";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>2911</td><td>麗嬰房</td>
+<td align='center'>101/02/20</td>
+<td align='center'>08:30</td>
+<td style='text-align:left !important;'>新加坡Ritz Carlton和香港Island Shangri-La</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="291120120217M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>291120120217M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="291120120217E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>291120120217E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.phland.com.tw/les_en/invest9.asp?fid=5' target='_blink'><font color='blue'><u>www.phland.com.tw/les_en/invest9.asp?fid=5</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>法人說明會日期：101/2/20~101/02/21</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2911";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>2912</td><td>統一超</td>
+<td align='center'>101/02/05</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>阿布達比、香港及新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="291220120203M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>291220120203M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="291220120203E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>291220120203E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.7-11.com.tw' target='_blink'><font color='blue'><u>www.7-11.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>100年前三季度營運財務狀況報告及未來營運展望說明。</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="2912";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3008</td><td>大立光</td>
+<td align='center'>101/02/09</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>凱基證券總部(台北市明水路700號12樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="300820120209M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>300820120209M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="300820120209E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>300820120209E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3008";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3034</td><td>聯詠</td>
+<td align='center'>101/02/09</td>
+<td align='center'>14:00</td>
+<td style='text-align:left !important;'>新竹科學工業園區篤行一路2號2樓會議室(聯詠科技辦公大樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303420120209M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303420120209M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303420120209E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303420120209E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.novatek.com.tw' target='_blink'><font color='blue'><u>www.novatek.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3034";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3035</td><td>智原</td>
+<td align='center'>101/02/17</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市信義路四段236號7樓(宏遠證券公司7樓會議室)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303520120217M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303520120217M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303520120217E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303520120217E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.faraday-tech.com/html/ir/IRQuarterlyReports.html' target='_blink'><font color='blue'><u>www.faraday-tech.com/html/ir/IRQuarterlyReports.html</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3035";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3035</td><td>智原</td>
+<td align='center'>101/02/17</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市信義路四段236號7樓(宏遠證券公司7樓會議室)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303520120220M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303520120220M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303520120220E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303520120220E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.faraday-tech.com/html/ir/IRQuarterlyReports.html' target='_blink'><font color='blue'><u>www.faraday-tech.com/html/ir/IRQuarterlyReports.html</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3035";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3036</td><td>文曄</td>
+<td align='center'>101/02/07</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>兆豐證券大樓(台北市忠孝東路二段95號13樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303620120207M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303620120207M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303620120207E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303620120207E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.wtmec.com' target='_blink'><font color='blue'><u>www.wtmec.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3036";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3037</td><td>欣興</td>
+<td align='center'>101/02/17</td>
+<td align='center'>15:00</td>
+<td style='text-align:left !important;'>337 桃園縣大園鄉高鐵北路二段147號 TPCA教育訓練中心，5樓國際會議廳</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303720120217M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303720120217M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="303720120217E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>303720120217E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3037";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3041</td><td>揚智</td>
+<td align='center'>101/02/14</td>
+<td align='center'>15:00</td>
+<td style='text-align:left !important;'>線上法說會</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304120120214M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304120120214M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304120120214E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304120120214E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3041";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3045</td><td>台灣大</td>
+<td align='center'>101/02/24</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304520120224M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304520120224M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304520120224E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304520120224E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.taiwanmobile.com' target='_blink'><font color='blue'><u>www.taiwanmobile.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3045";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3045</td><td>台灣大</td>
+<td align='center'>101/02/20</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>巴黎及倫敦</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304520120220M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304520120220M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304520120220E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304520120220E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.taiwanmobile.com' target='_blink'><font color='blue'><u>www.taiwanmobile.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>101/2/20~101/2/22召開</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3045";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3045</td><td>台灣大</td>
+<td align='center'>101/02/08</td>
+<td align='center'>08:00</td>
+<td style='text-align:left !important;'>新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304520120208M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304520120208M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="304520120208E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>304520120208E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.taiwanmobile.com' target='_blink'><font color='blue'><u>www.taiwanmobile.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>2012/02/08~2012/02/09召開</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3045";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3231</td><td>緯創</td>
+<td align='center'>101/02/23</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="323120120222M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>323120120222M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="323120120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>323120120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.wistron.com.tw' target='_blink'><font color='blue'><u>www.wistron.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3231";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3376</td><td>新日興</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>101/2 /16 日在香港及2/17在新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="337620120215M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>337620120215M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="337620120215E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>337620120215E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.szs.com.tw/' target='_blink'><font color='blue'><u>www.szs.com.tw/</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司參加101/02/16~17匯豐銀行主辦之活動</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3376";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3443</td><td>創意</td>
+<td align='center'>101/02/10</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>兆豐證券總公司(台北市忠孝東路2段95號13樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="344320120210M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>344320120210M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="344320120210E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>344320120210E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.globalunichip.com' target='_blink'><font color='blue'><u>www.globalunichip.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3443";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3504</td><td>揚明光</td>
+<td align='center'>101/02/15</td>
+<td align='center'>16:00</td>
+<td style='text-align:left !important;'>台北國際會議中心(台北市信義路五段1號)會議室201DE</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="350420120215M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>350420120215M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="350420120215E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>350420120215E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.youngoptics.com' target='_blink'><font color='blue'><u>www.youngoptics.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3504";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3545</td><td>敦泰</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港/新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="354520120213M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>354520120213M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="354520120213E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>354520120213E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>2/16-2/17受邀參加HSBC &quot;Technology Day&quot;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3545";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3673</td><td>TPK-KY</td>
+<td align='center'>101/02/21</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>君悅飯店-3樓凱悅廳(台北市松壽路2號)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="367320120221M003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>367320120221M003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="367320120221E003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>367320120221E003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.tpk.com' target='_blink'><font color='blue'><u>www.tpk.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>新聞稿</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3673";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3673</td><td>TPK-KY</td>
+<td align='center'>101/02/21</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>君悅飯店-3樓凱悅廳(台北市松壽路2號)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="367320120221M004.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>367320120221M004.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="367320120221E004.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>367320120221E004.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.tpk.com' target='_blink'><font color='blue'><u>www.tpk.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3673";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3673</td><td>TPK-KY</td>
+<td align='center'>101/02/23</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="367320120221M005.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>367320120221M005.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="367320120221E005.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>367320120221E005.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>101年02月23日至101年02月24日參加法銀巴黎證券舉辦法說會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3673";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>3702</td><td>大聯大</td>
+<td align='center'>101/02/16</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港及新加坡</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="370220120223M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>370220120223M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="370220120223E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>370220120223E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.wpgholdings.com' target='_blink'><font color='blue'><u>www.wpgholdings.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>本公司受邀參加2/16-2/17在海外舉辦之HSBC Technology Day</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3702";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>3702</td><td>大聯大</td>
+<td align='center'>101/02/03</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市重慶南路一段2號3樓</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="370220120203M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>370220120203M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="370220120203E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>370220120203E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.wpgholdings.com' target='_blink'><font color='blue'><u>www.wpgholdings.com</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>說明100年第四季營業報告</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="3702";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>4904</td><td>遠傳</td>
+<td align='center'>101/02/24</td>
+<td align='center'>08:30</td>
+<td style='text-align:left !important;'>香港、紐約、費城、波士頓及舊金山</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="490420120223M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>490420120223M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="490420120223E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>490420120223E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.fareastone.com.tw' target='_blink'><font color='blue'><u>www.fareastone.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="4904";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>4904</td><td>遠傳</td>
+<td align='center'>101/02/16</td>
+<td align='center'>15:00</td>
+<td style='text-align:left !important;'>本公司</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="490420120216M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>490420120216M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="490420120216E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>490420120216E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.fareastone.com.tw' target='_blink'><font color='blue'><u>www.fareastone.com.tw</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>以電話會議方式進行法人說明會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="4904";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>4906</td><td>正文</td>
+<td align='center'>101/02/21</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>新加坡Fullerton Hotel及香港Mandarin Oriental Hotel</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="490620120222M001.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>490620120222M001.ppt</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="490620120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>490620120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>101年2月21日至24日應邀參加麥格里證券North Asia Conference</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="4906";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>5203</td><td>訊連</td>
+<td align='center'>101/02/16</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>文化大學大夏館 (台北市建國南路二段231號B1)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="520320120216M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>520320120216M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="520320120216E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>520320120216E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="5203";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>5871</td><td>中租-KY</td>
+<td align='center'>101/02/09</td>
+<td align='center'>09:00</td>
+<td style='text-align:left !important;'>香港</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="587120120207M001.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>587120120207M001.ppt</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="587120120207E001.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>587120120207E001.ppt</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="5871";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>6166</td><td>凌華</td>
+<td align='center'>101/02/22</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>凌華科技總公司(新北市中和區建一路166號9樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="616620120222M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>616620120222M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="616620120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>616620120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.adlinktech.com/big5/investor/financial.php?file=financial.htm' target='_blink'><font color='blue'><u>www.adlinktech.com/big5/investor/financial.php?file=financial.htm</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="6166";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>6191</td><td>精成科</td>
+<td align='center'>101/02/22</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市大安區信義路四段236號7樓 (宏遠證券7樓會議室)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="619120120222M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>619120120222M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="619120120222E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>619120120222E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.gbm.com.tw/' target='_blink'><font color='blue'><u>www.gbm.com.tw/</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>無</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="6191";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>6239</td><td>力成</td>
+<td align='center'>101/02/09</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北遠東國際大飯店香格里拉廳 (台北市敦化南路二段201號2樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="623920120209M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>623920120209M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="623920120209E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>623920120209E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="6239";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>6271</td><td>同欣電</td>
+<td align='center'>101/02/24</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北市重慶南路一段二號二十二樓(永豐金證券會議中心)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="627120120224M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>627120120224M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="627120120224E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>627120120224E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="6271";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>8081</td><td>致新</td>
+<td align='center'>101/02/08</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>本公司中和辦公室(新北市中和區中正路700號5樓)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="808120120208M003.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>808120120208M003.ppt</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="808120120208E003.ppt";document.fm_fileDownload.submit();'><font color='blue'><u>808120120208E003.ppt</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="8081";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>8110</td><td>華東</td>
+<td align='center'>101/02/16</td>
+<td align='center'>14:30</td>
+<td style='text-align:left !important;'>台北六福皇宮 B3永和殿(台北市南京東路三段133號B3)</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="811020120216M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>811020120216M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="811020120216E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>811020120216E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="8110";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>910861</td><td>神州-DR</td>
+<td align='center'>101/02/22</td>
+<td align='center'>16:30</td>
+<td style='text-align:left !important;'>香港(魚則)魚涌英皇道979號太古坊德宏大廈20樓2008室</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="91086120120222M003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>91086120120222M003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="91086120120222E003.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>91086120120222E003.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='www.digitalchina.com.hk' target='_blink'><font color='blue'><u>www.digitalchina.com.hk</u></font></a></td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>報告本公司截至2011年12月31日止九個月之業績</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="910861";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='odd' data-type='body' >
+<td style='text-align:left !important;'>9917</td><td>中保科</td>
+<td align='center'>101/02/20</td>
+<td align='center'>08:30</td>
+<td style='text-align:left !important;'>新加坡  Ritz-Carlton</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="991720120220M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>991720120220M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="991720120220E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>991720120220E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>富邦金控外資法人說明會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="9917";openWindow(this.form ,"");'>
+</td>
+</tr>
+<tr class='even' data-type='body' >
+<td style='text-align:left !important;'>9917</td><td>中保科</td>
+<td align='center'>101/02/21</td>
+<td align='center'>08:30</td>
+<td style='text-align:left !important;'>香港  Shangri-La</td>
+<td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="991720120221M001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>991720120221M001.pdf</u></font></a></td>
+<td style='text-align:left !important;'><a href='#' onclick='document.fm_fileDownload.fileName.value="991720120221E001.pdf";document.fm_fileDownload.submit();'><font color='blue'><u>991720120221E001.pdf</u></font></a></td>
+<td style='text-align:left !important;'>無</td><td style='text-align:left !important;'>&nbsp;</td>
+<td style='text-align:left !important;'>富邦金控外資法人說明會</td>
+<td align='center'><input type='button' value='查詢' onclick='document.form_t100sb02_1.co_id.value="9917";openWindow(this.form ,"");'>
+</td>
+</tr>
+</table>
+<br>
+<div class='pageBtn'>
+<input type='button' value='1' style='margin:15px 5px; cursor:pointer;background: #165c98;color: #fff;border: 1px solid #000000;border-radius: 2px;' onclick='page(0);' />
+</div>
+</form>
+<style>
+tr[data-page="none;"]{
+	display: none;
+}
+</style>
+<form action='/mops/web/ajax_t100sb02_1' method='post' onsubmit='return false;' name='fm1'>
+<input type='hidden' name='firstin' value='true'>
+<input type='hidden' name='step' value='10'>
+<input type='hidden' name='filename' value='t100sb02_1_20261108_20250925.csv'>
+<button style='background-color:transparent;border:0;cursor:pointer;text-decoration:underline;' onclick="action='/server-java/t105sb02';submit();"><img src='images/bu_03.gif' hspace='3' ></button>
+</form>
+
+</div>
+
+
+</body>
+
+
+
+<script>
+	try {
+		if(!document.querySelector('#table01')){
+			var table01 = document.createElement("div");
+			table01.id = "table01"; 
+			document.body.appendChild(table01);
+			if(document.querySelector("#div01")){
+				table01.appendChild(div01);
+			};
+		};
+
+		if (document.autoForm!=null && document.autoForm!=undefined && document.autoForm.run.value==''){
+			ajax1(document.autoForm,'div01');
+			document.querySelector('form[name=autoForm]').remove();
+		};
+
+		if (document.autoForm1!=null && document.autoForm1!=undefined && document.autoForm1.run.value==''){
+			ajax1(document.autoForm1,'div01');
+			document.querySelector('form[name=autoForm1]').remove();
+		};
+
+		if (document.autoRunScript!=null && document.autoRunScript!=undefined && document.autoRunScript.run!=null && document.autoRunScript.run.value!=''){
+			let s = document.autoRunScript.run.value;
+			let script = document.createElement("script");
+
+			script.innerText = s;
+			document.body.appendChild(script);
+			document.querySelector('form[name=autoRunScript] > input[name=run]').remove();
+		};
+
+		if (document.autoRunScript1!=null && document.autoRunScript1!=undefined){
+			if (document.autoRunScript1.count!=null && document.autoRunScript1.count!=undefined && document.autoRunScript1.count.value!=''){
+				var count = parseInt(document.autoRunScript1.count.value);
+				for (var i=0;i<count;i++){
+					var run = eval("document.autoRunScript1.run"+i);
+					if (run!=null && run!=undefined && run.value!=''){
+						var s = run.value;
+
+						var script = document.createElement("script");
+						script.textContent = s;
+						document.querySelector("body").appendChild(script);
+
+						run.remove();
+					};
+				};
+			}else if (document.autoRunScript1.run!=null && document.autoRunScript1.run!=undefined && document.autoRunScript1.run.value!=''){
+				var s = document.autoRunScript1.run.value;
+				s = htmlEncode(s);
+				var script = document.createElement("script");
+				script.textContent = s;
+				document.querySelector("body").appendChild(script);
+
+				document.querySelector('form[name=autoRunScript1] > input[name=run]').remove();
+			};
+		};
+	} catch (error) {
+		console.error("Script Error:", error);
+	};
+</script>
+
+
+
+</html>

@@ -1,0 +1,86 @@
+# $PRJ/config.yaml — 修改後下次執行即生效
+timezone: Asia/Taipei
+
+paths:                        # 相對路徑以 $PRJ 為根
+  output_dir: out_test
+  data_dir: data_test
+  logs_dir: logs_test
+
+range:
+  months_before: 3
+  months_after: 12
+  align_to_month: true        # D-3
+
+reminder:
+  days_before: 1
+  time: "20:00"               # Asia/Taipei
+
+calendars:
+  tw-settlement: {filename: tw-settlement.ics, name: 台股結算}
+  us-settlement: {filename: us-settlement.ics, name: 美股結算}
+  tw-earnings:   {filename: tw-earnings.ics,   name: 台股法說與財報}
+  us-earnings:   {filename: us-earnings.ics,   name: 美股財報（AI 供應鏈）}
+
+tw_settlement:
+  weekly_wed: {enabled: true, holiday_policy: next}   # next|previous|skip（開發階段核對期交所規格）
+  weekly_fri: {enabled: true, holiday_policy: next}
+
+# 期交所休市日表（kind: holiday=國定假日；market_only=市場無交易但機關上班）
+# 2026：開發階段逐筆對照期交所公告；2027：依法定假日推算暫定值，公告後更新
+taifex_holidays:
+  - {date: 2026-01-01, name: 元旦}
+  - {date: 2026-02-12, name: 春節前結算交割日（無交易）, kind: market_only}
+  - {date: 2027-01-01, name: 元旦, provisional: true}
+
+taifex_extra_holidays: []     # 使用者補充（颱風假等），格式同上
+
+tw_filing:
+  q1: "05-15"
+  q2: "08-14"
+  q3: "11-14"
+  annual: "03-31"             # 次年
+  monthly_revenue_day: 10
+
+mops:
+  url: https://mopsov.twse.com.tw/mops/web/ajax_t100sb02_1
+  referer: https://mopsov.twse.com.tw/mops/web/t100sb02_1
+  markets: [sii, otc]
+  request_interval_sec: 2.5   # ≥2
+  timeout_sec: 15
+  max_retries: 2
+  backoff_sec: 3
+  reconcile_future: true      # D-6
+  total_budget_sec: 35        # v2：MOPS 階段時間上限
+user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+
+yahoo:
+  enabled: true
+  url: https://tw.stock.yahoo.com/calendar/earnings-call
+  timeout_sec: 10
+  max_retries: 1
+
+tw_ir:
+  default_duration_minutes: 60
+
+us_earnings:
+  # 每檔 {ticker, group}；修改後下次執行即生效；ticker 不可重複
+  watchlist:
+    - {ticker: NVDA, group: AI晶片/GPU}
+    - {ticker: AMD, group: AI晶片/GPU}
+    - {ticker: CRWV, group: Neocloud}
+    - {ticker: AAPL, group: 手機/邊緣AI}
+  max_workers: 6              # 有限並行（ThreadPool），上限 8
+  submit_stagger_sec: 0.2     # 送出任務的間隔，避免同時打出去被 Yahoo 擋（HTTP 429）
+  per_ticker_timeout_sec: 20  # 單檔逾時
+  total_budget_sec: 50        # 整個美股財報抓取階段的時間上限
+  earnings_dates_limit: 12
+  reconcile_future: true      # D-6
+
+schedule:
+  label: com.market-calendar-ics.daily
+  hour: 7
+  minute: 30
+
+log:
+  level: INFO
+  retention_days: 30
