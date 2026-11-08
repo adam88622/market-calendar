@@ -1,0 +1,198 @@
+# $PRJ/config.yaml — 修改後下次執行即生效
+timezone: Asia/Taipei
+
+paths:                        # 相對路徑以 $PRJ 為根
+  output_dir: output
+  data_dir: data
+  logs_dir: logs
+
+range:
+  months_before: 3
+  months_after: 12
+  align_to_month: true        # D-3
+
+reminder:
+  days_before: 1
+  time: "20:00"               # Asia/Taipei
+
+calendars:
+  tw-settlement: {filename: tw-settlement.ics, name: 台股結算}
+  us-settlement: {filename: us-settlement.ics, name: 美股結算}
+  tw-earnings:   {filename: tw-earnings.ics,   name: 台股法說與財報}
+  us-earnings:   {filename: us-earnings.ics,   name: 美股財報（AI 供應鏈）}
+  global-holidays: {filename: global-holidays.ics, name: 海外休市（美日韓）}
+
+tw_settlement:
+  weekly_wed: {enabled: true, holiday_policy: next}   # next|previous|skip（開發階段核對期交所規格）
+  weekly_fri: {enabled: true, holiday_policy: next}
+
+# 期交所休市日表（kind: holiday=國定假日；market_only=市場無交易但機關上班）
+# 2026：開發階段逐筆對照期交所公告；2027：依法定假日推算暫定值，公告後更新
+taifex_holidays:
+  - {date: 2026-01-01, name: 元旦}
+  - {date: 2026-02-12, name: 春節前結算交割日（無交易）, kind: market_only}
+  - {date: 2026-02-13, name: 春節前結算交割日（無交易）, kind: market_only}
+  - {date: 2026-02-16, name: 春節}
+  - {date: 2026-02-17, name: 春節}
+  - {date: 2026-02-18, name: 春節}
+  - {date: 2026-02-19, name: 春節}
+  - {date: 2026-02-20, name: 春節}
+  - {date: 2026-02-27, name: 和平紀念日補假}
+  - {date: 2026-04-03, name: 兒童節補假}
+  - {date: 2026-04-06, name: 清明節補假}
+  - {date: 2026-05-01, name: 勞動節}
+  - {date: 2026-06-19, name: 端午節}
+  - {date: 2026-09-25, name: 中秋節}
+  - {date: 2026-09-28, name: 教師節}
+  - {date: 2026-10-09, name: 國慶日補假}
+  - {date: 2026-10-26, name: 臺灣光復紀念日補假}
+  - {date: 2026-12-25, name: 行憲紀念日}
+  - {date: 2027-01-01, name: 元旦, provisional: true}
+  - {date: 2027-02-04, name: 春節, provisional: true}
+  - {date: 2027-02-05, name: 春節, provisional: true}
+  - {date: 2027-02-08, name: 春節, provisional: true}
+  - {date: 2027-02-09, name: 春節補假, provisional: true}
+  - {date: 2027-02-10, name: 春節補假, provisional: true}
+  - {date: 2027-03-01, name: 和平紀念日補假, provisional: true}
+  - {date: 2027-04-05, name: 清明節, provisional: true}
+  - {date: 2027-04-06, name: 兒童節補假, provisional: true}
+  - {date: 2027-04-30, name: 勞動節補假, provisional: true}
+  - {date: 2027-06-09, name: 端午節, provisional: true}
+  - {date: 2027-09-15, name: 中秋節, provisional: true}
+  - {date: 2027-09-28, name: 教師節, provisional: true}
+  - {date: 2027-10-11, name: 國慶日補假, provisional: true}
+  - {date: 2027-10-25, name: 臺灣光復紀念日, provisional: true}
+  - {date: 2027-12-24, name: 行憲紀念日補假, provisional: true}
+  # 2027 春節前「僅結算交割無交易」日待期交所公告後補入（kind: market_only）
+
+taifex_extra_holidays: []     # 使用者補充（颱風假等），格式同上
+
+tw_filing:
+  q1: "05-15"
+  q2: "08-14"
+  q3: "11-14"
+  annual: "03-31"             # 次年
+  monthly_revenue_day: 10
+
+mops:
+  url: https://mopsov.twse.com.tw/mops/web/ajax_t100sb02_1
+  referer: https://mopsov.twse.com.tw/mops/web/t100sb02_1
+  markets: [sii, otc]
+  request_interval_sec: 2.5   # ≥2
+  timeout_sec: 15
+  max_retries: 2
+  backoff_sec: 3
+  reconcile_future: true      # D-6
+  total_budget_sec: 35        # v2：MOPS 階段時間上限
+user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+
+yahoo:
+  enabled: true
+  url: https://tw.stock.yahoo.com/calendar/earnings-call
+  timeout_sec: 10
+  max_retries: 1
+
+tw_ir:
+  default_duration_minutes: 60
+
+us_earnings:
+  # 每檔 {ticker, group}；修改後下次執行即生效；ticker 不可重複
+  watchlist:
+    # AI晶片/GPU
+    - {ticker: NVDA, group: AI晶片/GPU}
+    - {ticker: AMD,  group: AI晶片/GPU}
+    # ASIC/網通晶片
+    - {ticker: AVGO, group: ASIC/網通晶片}
+    - {ticker: MRVL, group: ASIC/網通晶片}
+    # 雲端CSP
+    - {ticker: MSFT,  group: 雲端CSP}
+    - {ticker: GOOGL, group: 雲端CSP}
+    - {ticker: AMZN,  group: 雲端CSP}
+    - {ticker: META,  group: 雲端CSP}
+    - {ticker: ORCL,  group: 雲端CSP}
+    # Neocloud
+    - {ticker: CRWV, group: Neocloud}
+    - {ticker: NBIS, group: Neocloud}
+    - {ticker: IREN, group: Neocloud}
+    - {ticker: APLD, group: Neocloud}
+    # 伺服器/EMS
+    - {ticker: DELL, group: 伺服器/EMS}
+    - {ticker: SMCI, group: 伺服器/EMS}
+    - {ticker: HPE,  group: 伺服器/EMS}
+    - {ticker: CLS,  group: 伺服器/EMS}
+    - {ticker: JBL,  group: 伺服器/EMS}
+    - {ticker: FLEX, group: 伺服器/EMS}
+    # 網通交換器
+    - {ticker: ANET, group: 網通交換器}
+    - {ticker: CSCO, group: 網通交換器}
+    # 光通訊
+    - {ticker: LITE, group: 光通訊}
+    - {ticker: COHR, group: 光通訊}
+    - {ticker: CIEN, group: 光通訊}
+    - {ticker: FN,   group: 光通訊}
+    - {ticker: AAOI, group: 光通訊}
+    # 高速連接
+    - {ticker: CRDO, group: 高速連接}
+    - {ticker: ALAB, group: 高速連接}
+    # 電源散熱
+    - {ticker: VRT,  group: 電源散熱}
+    - {ticker: ETN,  group: 電源散熱}
+    - {ticker: NVT,  group: 電源散熱}
+    - {ticker: MOD,  group: 電源散熱}
+    - {ticker: MPWR, group: 電源散熱}
+    # 記憶體/儲存
+    - {ticker: MU,   group: 記憶體/儲存}
+    - {ticker: WDC,  group: 記憶體/儲存}
+    - {ticker: STX,  group: 記憶體/儲存}
+    - {ticker: SNDK, group: 記憶體/儲存}
+    # 半導體設備/封測
+    - {ticker: ASML, group: 半導體設備/封測}
+    - {ticker: AMAT, group: 半導體設備/封測}
+    - {ticker: LRCX, group: 半導體設備/封測}
+    - {ticker: KLAC, group: 半導體設備/封測}
+    - {ticker: TER,  group: 半導體設備/封測}
+    - {ticker: AMKR, group: 半導體設備/封測}
+    # 晶圓代工
+    - {ticker: TSM, group: 晶圓代工}
+    # 手機/邊緣AI
+    - {ticker: AAPL, group: 手機/邊緣AI}
+    - {ticker: QCOM, group: 手機/邊緣AI}
+    - {ticker: ARM,  group: 手機/邊緣AI}
+    # 其他
+    - {ticker: INTC, group: 其他}
+    # AI基建（電網/工程/電力/機房）
+    - {ticker: GEV,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: PWR,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: EME,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: FIX,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: VST,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: CEG,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: BE,   group: AI基建（電網/工程/電力/機房）}
+    - {ticker: DLR,  group: AI基建（電網/工程/電力/機房）}
+    - {ticker: EQIX, group: AI基建（電網/工程/電力/機房）}
+  max_workers: 6              # 有限並行（ThreadPool），上限 8
+  submit_stagger_sec: 0.2     # 送出任務的間隔，避免同時打出去被 Yahoo 擋（HTTP 429）
+  per_ticker_timeout_sec: 20  # 單檔逾時
+  total_budget_sec: 40        # 整個美股財報抓取階段的時間上限（v4.1 R12）
+  earnings_dates_limit: 12
+  reconcile_future: true      # D-6
+
+schedule:
+  label: com.market-calendar-ics.daily
+  times: ["08:30", "12:30", "19:30", "21:30"]   # 每日執行時間（1–12 個，HH:MM，不可重複）
+  hour: 21                    # 相容欄位：times 優先，有 times 時忽略
+  minute: 0                   # 相容欄位：times 優先，有 times 時忽略
+  launch_mode: direct         # direct|open（v4.1 R16）
+
+network_check:                # 離線時乾淨跳過本次執行
+  enabled: true
+  timeout_sec: 4
+
+apple_calendar:               # F-008
+  enabled: true               # false → 完全不載入 EventKit
+  prefer_source: iCloud       # iCloud | local（local = 本機「On My Mac」）
+  delete_future_missing: true # 今天以後、已不在本次集合的本專案事件 → 刪除
+
+log:
+  level: INFO
+  retention_days: 30

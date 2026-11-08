@@ -1,0 +1,13 @@
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+yfinance>=0.2.50
+pandas_market_calendars>=4.4
+PyYAML>=6.0
+pandas>=2.0
+numpy>=1.26
+icalendar>=5.0
+pytest>=8.0
+pyobjc-framework-EventKit>=13.0; sys_platform == "darwin"
+holidays>=0.108
+tzdata>=2026.6
