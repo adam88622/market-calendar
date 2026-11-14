@@ -1,0 +1,117 @@
+{
+  "calendars": [
+    {
+      "bytes": 72603,
+      "events": 138,
+      "file_present": true,
+      "filename": "tw-settlement.ics",
+      "id": "tw-settlement",
+      "last_attempt_status": "ok",
+      "last_success_taipei": "2026-11-15 02:49",
+      "last_success_utc": "2026-11-14T18:49:07Z",
+      "name": "台股結算",
+      "sha256": "32a4f7ee746da21bfb1eee8e83b6c43f1fde89e67fc9f66d875c5a6a0f7b1c53",
+      "url": "https://adam88622.github.io/market-calendar/tw-settlement.ics",
+      "webcal_url": "webcal://adam88622.github.io/market-calendar/tw-settlement.ics"
+    },
+    {
+      "bytes": 16395,
+      "events": 32,
+      "file_present": true,
+      "filename": "us-settlement.ics",
+      "id": "us-settlement",
+      "last_attempt_status": "ok",
+      "last_success_taipei": "2026-11-15 02:49",
+      "last_success_utc": "2026-11-14T18:49:07Z",
+      "name": "美股結算",
+      "sha256": "1507183b1ee8ec8e1adb54d5880d579aaee597f769a006e3afeade299cbb96db",
+      "url": "https://adam88622.github.io/market-calendar/us-settlement.ics",
+      "webcal_url": "webcal://adam88622.github.io/market-calendar/us-settlement.ics"
+    },
+    {
+      "bytes": 357344,
+      "events": 534,
+      "file_present": true,
+      "filename": "tw-earnings.ics",
+      "id": "tw-earnings",
+      "last_attempt_status": "ok",
+      "last_success_taipei": "2026-11-15 02:49",
+      "last_success_utc": "2026-11-14T18:49:07Z",
+      "name": "台股法說與財報",
+      "sha256": "6b16db956a2eea7ead7c6bc3cd85c5ea608660d93da1e7d00ff9417e259c93ad",
+      "url": "https://adam88622.github.io/market-calendar/tw-earnings.ics",
+      "webcal_url": "webcal://adam88622.github.io/market-calendar/tw-earnings.ics"
+    },
+    {
+      "bytes": 71841,
+      "events": 130,
+      "file_present": true,
+      "filename": "us-earnings.ics",
+      "id": "us-earnings",
+      "last_attempt_status": "ok",
+      "last_success_taipei": "2026-11-15 02:49",
+      "last_success_utc": "2026-11-14T18:49:07Z",
+      "name": "美股財報（AI 供應鏈）",
+      "sha256": "3216bfa643032697d2aeb0febfef045fc460721aed72d56502cc1a23891be841",
+      "url": "https://adam88622.github.io/market-calendar/us-earnings.ics",
+      "webcal_url": "webcal://adam88622.github.io/market-calendar/us-earnings.ics"
+    },
+    {
+      "bytes": 39787,
+      "events": 59,
+      "file_present": true,
+      "filename": "global-holidays.ics",
+      "id": "global-holidays",
+      "last_attempt_status": "ok",
+      "last_success_taipei": "2026-11-15 02:49",
+      "last_success_utc": "2026-11-14T18:49:07Z",
+      "name": "海外休市（美日韓）",
+      "sha256": "db1c451cf11edd1af9f7f444ddf01a2c5d780ddf1575f1ad85e0b10db24c2d68",
+      "url": "https://adam88622.github.io/market-calendar/global-holidays.ics",
+      "webcal_url": "webcal://adam88622.github.io/market-calendar/global-holidays.ics"
+    }
+  ],
+  "generated_at_taipei": "2026-11-15 02:49",
+  "generated_at_utc": "2026-11-14T18:49:07Z",
+  "run": {
+    "exit_code": 0,
+    "failures": [],
+    "outcome": "completed",
+    "report_missing": false,
+    "state_db": "restored"
+  },
+  "schema_version": 1,
+  "site_url": "https://adam88622.github.io/market-calendar/",
+  "sources": {
+    "mops": {
+      "detail": {
+        "errors": 0,
+        "expected_scopes": 4,
+        "ok_scopes": 4,
+        "records": 491
+      },
+      "error_samples": [],
+      "status": "ok"
+    },
+    "yahoo": {
+      "detail": {
+        "enabled": true,
+        "errors": 0,
+        "records": 191
+      },
+      "error_samples": [],
+      "status": "ok"
+    },
+    "yfinance": {
+      "detail": {
+        "failed": 0,
+        "ok": 57,
+        "queued": 0,
+        "timeout": 0,
+        "total": 57
+      },
+      "error_samples": [],
+      "status": "ok"
+    }
+  }
+}
